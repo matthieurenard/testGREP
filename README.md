@@ -55,14 +55,13 @@ To test GREP on property *propThesis.tmtn* for instance, with input (1, w)(2,
 a)(3, on)(4, w)(5, off), issue:
 
 ```
-$ echo (1, w)(2, a)(3, on)(4, w)(5, off) | ./game_enf_offline -a propThesis.tmtn
+$ echo "(1, w)(2, a)(3, on)(4, w)(5, off)" | ./game_enf_offline -a propThesis.tmtn
 ```
 
 To also draw the game graph and the zone graph, one can use:
 
 ```
-$ echo (1, w)(2, a)(3, on)(4, w)(5, off) | ./game_enf_offline -a propThesis.tmtn \
- -d gamegraph.pdf -z zonegraph.pdf
+$ echo "(1, w)(2, a)(3, on)(4, w)(5, off)" | ./game_enf_offline -a propThesis.tmtn -d gamegraph.pdf -z zonegraph.pdf
 ```
 
 Since there is no graphical interface in the VM, to see the produced files, we 
