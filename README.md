@@ -25,10 +25,27 @@ Extenstion Pack with VirtualBox.
 
 ## Running the Virtual Machine
 
-Once Vagrant, VirtualBox, and the Extension Pack are installed, just open a 
-shell, go to the directory containing the VagrantFile of this repository 
-(https://github.com/matthieurenard/testGREP) and run
-
+Once Vagrant, VirtualBox, and the Extension Pack are installed, open a 
+shell, go to some directory that will contain this git repository, and issue:
+```
+git clone https://github.com/matthieurenard/testGREP.git
+```
+then cd into the testGREP repository:
+```
+cd testGREP
+```
+Verify that the Vagrantfile is in the current working directory with `ls`.
+If you do not want to use *git*, you can simply download the Vagrantfile 
+directly at the url 
+https://raw.githubusercontent.com/matthieurenard/testGREP/master/Vagrantfile.
+For example, using wget:
+```
+wget https://raw.githubusercontent.com/matthieurenard/testGREP/master/Vagrantfile
+```
+You can also download a zipped version of the repository from github.
+The only important thing is that you have the Vagrantfile in the current working 
+directory of your shell.
+Then, run:
 ```
 $ vagrant up
 ```
@@ -67,13 +84,19 @@ $ echo "(1, w)(2, a)(3, on)(4, w)(5, off)" | ./game_enf_offline -a propThesis.tm
 Since there is no graphical interface in the VM, to see the produced files, we 
 need to retrieve them on the host.
 To do this, simply copy or move the files to the directory /vagrant, which is 
-synced with the directory of the host containing the VagrantFile:
+synced with the directory of the host containing the Vagrantfile:
 
 ```
 $ cp gamegraph.pdf zonegraph.pdf /vagrant
 ```
 
-The files should appear on the host next to the VagrantFile.
+The files should appear on the host next to the Vagrantfile.
 Use your favourite PDF viewer to visualise them.
+
+You can leave the virtual machine just like any SSH connection, by simply 
+issuing:
+```
+exit
+```
 
 
